@@ -34,8 +34,6 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center">
-            <!-- Imagem Ultrasecreto -->
-            <img class="img-fluid" src="./assets/img/ultrasecreto.svg">
 
             <!-- Headline -->
             <img class="img-fluid" src="./assets/img/headline.png">
@@ -44,14 +42,37 @@
             <script type="text/javascript" id="scr_6226ac18aa8f7e000965d88e">var s=document.createElement("script");s.src="https://cdn.converteai.net/8b03b5e9-1e95-4b45-9063-037ac9b350ab/players/6226ac18aa8f7e000965d88e/player.js",s.async=!0,document.head.appendChild(s);</script>
 
             <br/> 
-            <br/> 
+<!-- Pessoas assistindo -->
+<span style="color: #fff;">
+<div id="viewers">
+	<div id="viewers" style="font-weight: bold; font-family: helvetica, arial, sans-serif; font-size: 14px;">
+  <span></span> pessoas estão assistindo a esse vídeo agora...
+</div>
+<script>
+  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
 
+  setInterval(() => {
+    updatesUsersView();
+  }, 2500);
+
+  function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+  }
+
+  function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+  }
+</script>
             <!-- Botão -->
             <div id="cta1" class="mt-4 d-none"> 
-            <a href="https://pay.kiwify.com.br/h2dDhMy"><button style="background: #fa0053; border-radius: 4px; padding: 26px; cursor: pointer; color: #fff; border: none; font-size: 16px; display: inline-block; text-decoration: none;  letter-spacing: 2px;  ">QUERO FAZER O PROGRAMA</button></a>
+            <a href="https://pay.kiwify.com.br/h2dDhMy"><button style="background: #fa0053; border-radius: 4px; padding: 26px; cursor: pointer; color: #fff; border: none; font-size: 16px; display: inline-block; text-decoration: none;  letter-spacing: 2px;  ">QUERO FAZER O PROGRAMA</button></a></div>
 
             <!-- Termos de Uso e Política de Privacidade -->
             <div class="text-white mt-4"><a href="termos.html" class="text-white">Termos de Uso</a> | <a href="privacidade.html" class="text-white">Política de Privacidade</a></div>
+
           </div>
         </div>
       </div>
@@ -1479,12 +1500,16 @@ function postReply(id) {
         </section>
 
     <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 0); // temporização da Call to Action (em milissegundos)
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 60000); // temporização da Call to Action (em milissegundos)
     </script>
 
     <script type="text/javascript">
       setTimeout(() => {document.getElementById("cmen").classList.remove("d-none")}, 60000); // temporização da Call to Action (em milissegundos)
     </script>
+
+    <!-- Botão -->
+    <div id="cta1" class="mt-4 d-none"> 
+    <a href="https://pay.kiwify.com.br/h2dDhMy"><button style="background: #fa0053; border-radius: 4px; padding: 26px; cursor: pointer; color: #fff; border: none; font-size: 16px; display: inline-block; text-decoration: none;  letter-spacing: 2px;  ">QUERO FAZER O PROGRAMA</button></a></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
